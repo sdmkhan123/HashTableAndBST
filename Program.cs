@@ -1,4 +1,5 @@
 ﻿using HashTableAndBST.HashTable;
+using HashTableAndBST.BSTImplementation;
 using System.Collections.Generic;
 using System.Text;
 using System;
@@ -15,7 +16,7 @@ namespace HashTableAndBST
             while (true)
             {
                 Console.WriteLine("****************************************************************");
-                Console.WriteLine("Press 1 : for Hash Map\nPress 0 : to exit");
+                Console.WriteLine("Press 1 : for Hash Map\nPress 2 : for Binary Search Tree\nPress 0 : to exit");
                 Console.WriteLine("****************************************************************\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -26,6 +27,12 @@ namespace HashTableAndBST
                         Console.WriteLine("****************************************************************\n");
                         HashMap.hashFunction();
                         break;
+                    case 2:
+                        Console.WriteLine("****************************************************************");
+                        Console.WriteLine("Welcome to  Binary Search Tree");
+                        Console.WriteLine("****************************************************************\n");
+                        BST.bStFunction();
+                        break;
                     case 0:
                         Environment.Exit(0);
                         break;
@@ -34,6 +41,7 @@ namespace HashTableAndBST
                         break;
                 }
             }
+            Console.WriteLine("\n****************************************************************");
         }
     }
 }
