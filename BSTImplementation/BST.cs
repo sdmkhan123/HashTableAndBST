@@ -32,6 +32,9 @@ namespace HashTableAndBST.BSTImplementation
             Console.WriteLine("****************************************************************\n");
             int h = tree.height(root);
             Console.WriteLine("Height of the given BST is " + h + "\n");
+            Console.WriteLine("****************************************************************\n");
+            bool check = tree.search(root, 63);
+            Console.WriteLine("Given node is present in BST :--> " + check + "\n");
         }
     }
 }

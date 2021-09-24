@@ -41,6 +41,12 @@ namespace HashTableAndBST.BSTImplementation
 			}
 			return;
 		}
+		/// <summary>
+		/// return the maximum of 2 num
+		/// </summary>
+		/// <param name="max1"></param>
+		/// <param name="max2"></param>
+		/// <returns></returns>
 		private int max(int max1, int max2)
 		{
 			if (max1 > max2)
@@ -52,6 +58,11 @@ namespace HashTableAndBST.BSTImplementation
 				return max2;
 			}
 		}
+		/// <summary>
+		/// calculate the height of BST
+		/// </summary>
+		/// <param name="root"></param>
+		/// <returns></returns>
 		public int height(Node root)
 		{
 			if (root == null || (root.left == null && root.right == null))
@@ -62,6 +73,31 @@ namespace HashTableAndBST.BSTImplementation
 			{
 				return (1 + max(height(root.left), height(root.right)));
 			}
+		}
+		/// <summary>
+		/// Search a Node present or not in given BST
+		/// </summary>
+		/// <param name="root"></param>
+		/// <param name="value"></param>
+		/// <returns></returns>
+		public bool search(Node root, int value)
+		{
+			while (root != null)
+			{
+				if (root.data == value)
+				{
+					return true;
+				}
+				else if (root.data > value)
+				{
+					return search(root.left, value);
+				}
+				else
+				{
+					return search(root.right, value);
+				}
+			}
+			return false;
 		}
 	}
 }
