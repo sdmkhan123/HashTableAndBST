@@ -41,5 +41,27 @@ namespace HashTableAndBST.BSTImplementation
 			}
 			return;
 		}
+		private int max(int max1, int max2)
+		{
+			if (max1 > max2)
+			{
+				return max1;
+			}
+			else
+			{
+				return max2;
+			}
+		}
+		public int height(Node root)
+		{
+			if (root == null || (root.left == null && root.right == null))
+			{
+				return 0;
+			}
+			else
+			{
+				return (1 + max(height(root.left), height(root.right)));
+			}
+		}
 	}
 }
