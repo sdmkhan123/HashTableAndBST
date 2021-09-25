@@ -67,6 +67,24 @@ namespace HashTableAndBST.HashTable
             }
             return default(V);
         }
+        public void removeWord(K removePos)
+        {
+            int position = GetArrayPosition(removePos);
+            LinkedList<KeyValue<K, V>> linkedList = GetLinkedList(position);
+            bool itemFound = false;
+            KeyValue<K, V> foundItem = default(KeyValue<K, V>);
+            foreach (KeyValue<K, V> i in linkedList)
+            {
+                if (i.Key.Equals(removePos))
+                {
+                    itemFound = true;
+                    foundItem = i;
+
+                }
+            }
+            if (itemFound)
+                linkedList.Remove(foundItem);
+        }
         public void findFreq(string[] Words)
         {
             //print freqency of each word in Hash table
