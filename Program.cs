@@ -16,7 +16,11 @@ namespace HashTableAndBST
             while (true)
             {
                 Console.WriteLine("****************************************************************");
+<<<<<<< HEAD
                 Console.WriteLine("Press 1 : for Hash Map\nPress 2 : for Binary Search Tree\nPress 0 : to exit");
+=======
+                Console.WriteLine("Press 1 : For Hash Map\nPress 0 : To exit");
+>>>>>>> UcTwo_FrequencyOfWordsInParagragh
                 Console.WriteLine("****************************************************************\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
